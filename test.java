@@ -1,32 +1,17 @@
 import java.util.*;
-public class test {
-    public static boolean pal(String s){
-        int n=s.length();
-        if(n==1){
-            return true;
+
+class test{
+    public static void main(String args[]){
+        int a;
+
+        try{
+            a=10/0;
         }
-        boolean flag=true;
-        for(int i=0;i<n/2;i++){
-            if(s.charAt(i)!=s.charAt(n-i-1)){
-                flag=false;
-            }
+        catch(Exception e){
+            System.out.print(e);
         }
-        if(flag==true){
-            return true;
+        finally{
+            System.out.print("done");
         }
-        return false;
-    }
-    public static void main(String args[]) {
-        Scanner sc=new Scanner(System.in);
-        String s=sc.next();
-        int count=0;
-        for(int i=0;i<s.length();i++){
-            for(int j=i+1;j<=s.length();j++){
-                if(pal(s.substring(i,j))) {
-                    count++;
-                }
-            }
-        }
-        System.out.print(count);
     }
 }
